@@ -2,10 +2,17 @@ FROM linuxserver/baseimage.python
 
 MAINTAINER kylerw <kylerw@gmail.com>
 
-ENV PIPLIST=""
+ENV APTLIST="git"
+#Applying stuff
+RUN apt-get update -q  && \
+apt-get install $APTLIST -qy && \
 
+
+ENV PIPLIST=""
 # install packages
 RUN pip install -U $PIPLIST && \
+
+# Clean up
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 #Adding Custom files
