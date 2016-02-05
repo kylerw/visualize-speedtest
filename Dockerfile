@@ -2,7 +2,7 @@ FROM linuxserver/baseimage.python
 
 MAINTAINER kylerw <kylerw@gmail.com>
 
-ENV PIPLIST="plotly"
+ENV PIPLIST="plotly json-rpc"
 ENV APTLIST="python-pandas"
 
 # install packages
