@@ -1,8 +1,8 @@
 #!/bin/bash
 mkdir -p /config/{speedtest-tracking,speedtest-cli}
 
-[[ ! -d /config/speedtest-tracking/.git ]] && git pull https://github.com/kylerw/speedtest-tracking.git /config/speedtest-tracking 
-[[ ! -d /config/speedtest-cli/.git ]] && git pull https://github.com/sivel/speedtest-cli.git /config/speedtest-cli
+[[ ! -d /config/speedtest-tracking/.git ]] && git clone https://github.com/kylerw/speedtest-tracking.git /config/speedtest-tracking 
+[[ ! -d /config/speedtest-cli/.git ]] && git clone https://github.com/sivel/speedtest-cli.git /config/speedtest-cli
 
 chown -R abc:abc /config
 
