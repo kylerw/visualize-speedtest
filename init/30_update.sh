@@ -5,6 +5,7 @@ mkdir -p /config/{speedtest-tracking,speedtest-cli}
 [[ ! -d /config/speedtest-cli/.git ]] && git clone https://github.com/sivel/speedtest-cli.git /config/speedtest-cli
 
 chown -R abc:abc /config
+chmod -v -R +wx /config/*
 
 # opt out for autoupdates
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
@@ -16,3 +17,4 @@ cd /config/speedtest-cli
 git pull
 
 chown -R abc:abc /config
+chmod -v -R +wx /config/*
