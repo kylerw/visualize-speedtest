@@ -2,8 +2,8 @@ FROM linuxserver/baseimage.python
 
 MAINTAINER kylerw <kylerw@gmail.com>
 
-ENV PIPLIST="plotly json-rpc"
-ENV APTLIST="python-pandas"
+ENV PIPLIST="plotly json-rpc pandas"
+ENV APTLIST=""
 
 # install packages
 RUN pip install -U $PIPLIST 
